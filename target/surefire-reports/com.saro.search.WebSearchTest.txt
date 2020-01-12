@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.saro.search.WebSearchTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.489 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.079 sec

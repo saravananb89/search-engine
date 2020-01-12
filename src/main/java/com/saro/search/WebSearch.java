@@ -15,7 +15,9 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
 @Slf4j
@@ -58,7 +60,7 @@ public class WebSearch {
         return sources;
     }
 
-    void printTopJSLibraries(List<String> usedJSLibraries) {
+    List<String> printTopJSLibraries(List<String> usedJSLibraries) {
         Map<String, Integer> duplicateMap = new HashMap<>();
         for (String name : usedJSLibraries) {
             Integer count = duplicateMap.get(name);
@@ -76,14 +78,11 @@ public class WebSearch {
                         toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,
                                 LinkedHashMap::new));
 
-        int count = 0;
-        for (String jsLibrary : sortedMap.keySet()) {
-            if (count < 5) {
-                System.out.println("Printing Top 5 Used JS Libraries "
-                        + jsLibrary);
-                count++;
-            }
-        }
+        List<String> topJSLibs = sortedMap.keySet().stream().limit(5).collect(toList());
+        topJSLibs.
+                forEach(script -> System.out.println("Printing Top 5 Used JS Libraries " + script));
+
+        return topJSLibs;
     }
 
     private SearchResult search(SearchQuery query) {
