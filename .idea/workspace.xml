@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94938be6-023b-447b-9d76-b2dcf5456347" name="Default Changelist" comment="" />
+    <list default="true" id="94938be6-023b-447b-9d76-b2dcf5456347" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saro/search/WebSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saro/search/WebSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saro/search/WebSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saro/search/WebSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch$SearchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch$SearchConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +22,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,7 +33,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1WGZzjVz55sZnnNLtR86cFy1zkj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -46,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WebSearchTest (1)">
+  <component name="RunManager" selected="JUnit.WebSearchTest.test_ExtractUsedJSLibraries (1)">
     <configuration name="WebSearchTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="search" />
       <extension name="coverage">
@@ -77,8 +89,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebSearchTest.test_ExtractUsedJSLibraries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="search-engine" />
+    <configuration name="WebSearchTest.test_ExtractUsedJSLibraries (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="search" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.saro.search.*" />
@@ -93,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebSearchTest.test_GoogleSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebSearchTest.test_ExtractUsedJSLibraries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="search-engine" />
       <extension name="coverage">
         <pattern>
@@ -103,7 +115,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.saro.search" />
       <option name="MAIN_CLASS_NAME" value="com.saro.search.WebSearchTest" />
-      <option name="METHOD_NAME" value="test_GoogleSearch" />
+      <option name="METHOD_NAME" value="test_ExtractUsedJSLibraries" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebSearchTest.test_ExtractUsedJSLibraries (1)" />
         <item itemvalue="JUnit.WebSearchTest (1)" />
         <item itemvalue="JUnit.WebSearchTest.test_ExtractUsedJSLibraries" />
         <item itemvalue="JUnit.WebSearchTest" />
         <item itemvalue="JUnit.WebSearchTest.test_extractUsedJSLibraries" />
-        <item itemvalue="JUnit.WebSearchTest.test_GoogleSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +206,17 @@
       <updated>1578778155383</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

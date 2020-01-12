@@ -4,8 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class WebSearchTest {
 
@@ -27,7 +29,7 @@ public class WebSearchTest {
     public void test_ExtractUsedJSLibraries() {
         List<String> usedJSLibraries = webSearch.extractJSLibraries(result);
 
-        webSearch.printTopJSLibraries(usedJSLibraries);
-        assertFalse(usedJSLibraries.isEmpty());
+        List<String> topJSLibs = webSearch.printTopJSLibraries(usedJSLibraries);
+        assertTrue(topJSLibs.size() == 5);
     }
 }
