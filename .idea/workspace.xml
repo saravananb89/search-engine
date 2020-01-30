@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94938be6-023b-447b-9d76-b2dcf5456347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/saro/search/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saro/search/WebSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saro/search/WebSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/saro/search/WebSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saro/search/WebSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch$SearchConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch$SearchConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/saro/search/WebSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/search.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/search.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.saro.search.WebSearchTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.saro.search.WebSearchTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.saro.search.WebSearchTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.saro.search.WebSearchTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/saro/search/WebSearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/saro/search/WebSearchTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="94938be6-023b-447b-9d76-b2dcf5456347" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
