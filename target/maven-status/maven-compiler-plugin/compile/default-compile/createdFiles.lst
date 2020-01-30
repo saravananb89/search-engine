@@ -1,6 +1,7 @@
-com\saro\search\SearchQuery$Builder.class
 com\saro\search\SearchData.class
 com\saro\search\WebSearch.class
-com\saro\search\SearchResult.class
 com\saro\search\SearchQuery.class
+com\saro\search\SearchQuery$Builder.class
+com\saro\search\SearchResult.class
+com\saro\search\MainApplication.class
 com\saro\search\WebSearch$SearchConfig.class
