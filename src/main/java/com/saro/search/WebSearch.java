@@ -2,6 +2,7 @@ package com.saro.search;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.log4j.PropertyConfigurator;
 import org.jsoup.Jsoup;
 import org.jsoup.internal.StringUtil;
 import org.jsoup.nodes.Document;
@@ -15,30 +16,28 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
 @Slf4j
-public class WebSearch {
-    private SearchConfig CONFIG = new SearchConfig();
+class WebSearch {
+    private static SearchConfig CONFIG = new SearchConfig();
 
-    Logger log = LoggerFactory.getLogger(WebSearch.class);
+    private static final Logger log =  getLogger();
 
-    public WebSearch() {
+    static {
+        PropertyConfigurator.configure("C:\\projekte\\search-engine\\src\\main\\resources\\log4j.properties");
     }
 
-    public WebSearch(SearchConfig config) {
-        this.CONFIG = config;
+    WebSearch() {
     }
 
-    SearchResult search(String query, int numResults) {
-        SearchQuery searchQuery = new SearchQuery.Builder(query).numResults(numResults).build();
-        return search(searchQuery);
+    static SearchQuery buildSearchQuery(String query, int numResults) {
+        return new SearchQuery.Builder(query).numResults(numResults).build();
     }
 
-    List<String> extractJSLibraries(SearchResult searchResult) {
+    private static List<String> extractJSLibraries(SearchResult searchResult) {
         List<String> sources = new ArrayList<>();
 
         for (String url : searchResult.getUrls()) {
@@ -60,7 +59,8 @@ public class WebSearch {
         return sources;
     }
 
-    List<String> printTopJSLibraries(List<String> usedJSLibraries) {
+    static List<String> printTopJSLibraries(SearchQuery searchQuery) {
+        List<String> usedJSLibraries = extractJSLibraries(search(searchQuery));
         Map<String, Integer> duplicateMap = new HashMap<>();
         for (String name : usedJSLibraries) {
             Integer count = duplicateMap.get(name);
@@ -85,14 +85,14 @@ public class WebSearch {
         return topJSLibs;
     }
 
-    private SearchResult search(SearchQuery query) {
+    private static SearchResult search(SearchQuery query) {
         log.debug("Search query: {}", query);
         Document response = getResponse(query);
         List<SearchData> hitsUrls = parseResponse(response);
         return new SearchResult(query, hitsUrls);
     }
 
-    private Document getResponse(SearchQuery query) {
+    private static Document getResponse(SearchQuery query) {
         String uri = getUri(query);
         log.debug("Complete URL: {}", uri);
         Document result = null;
@@ -107,7 +107,7 @@ public class WebSearch {
         return result;
     }
 
-    private String getUri(SearchQuery query) {
+    private static String getUri(SearchQuery query) {
         String uri = CONFIG.getGoogleSearchUrl().replaceAll(CONFIG.PLHD_QUERY, query.getQuery());
         uri = uri.replaceAll(CONFIG.PLHD_RESULTS_NUM,
                 ifPresent(CONFIG.PLHD_RESULTS_NUM, query.getNumResults()));
@@ -115,16 +115,16 @@ public class WebSearch {
         return uri;
     }
 
-    private String ifPresent(String plhd, Object param) {
+    private static String ifPresent(String plhd, Object param) {
         if (param != null) {
-            log.trace("URL parameter: {}", plhd + param);
+            log.debug("URL parameter: {}", plhd + param);
             return plhd + param;
         } else {
             return "";
         }
     }
 
-    private List<SearchData> parseResponse(Document searchDoc) {
+    private static List<SearchData> parseResponse(Document searchDoc) {
 
         List<SearchData> result = new ArrayList<>();
 
@@ -137,15 +137,21 @@ public class WebSearch {
                 String pureUrl = matcher.group(1);
                 if (!pureUrl.startsWith(CONFIG.CACHE_URL) && !pureUrl.startsWith(CONFIG.PREFRENCES_URL)) {
                     result.add(new SearchData(pureUrl));
-                    log.trace("{}", pureUrl);
+                    log.debug("{}", pureUrl);
                 }
             }
         }
         return result;
     }
 
+    static org.slf4j.Logger getLogger() {
+        final Throwable t = new Throwable();
+        t.fillInStackTrace();
+        return LoggerFactory.getLogger(t.getStackTrace()[1].getClassName());
+    }
     @Data
     public static class SearchConfig {
+
         private final String PLHD_QUERY = "__query__";
         private String PLHD_RESULTS_NUM = "&num=";
         private String PLHD_SITE = "&as_sitesearch=";
@@ -160,7 +166,7 @@ public class WebSearch {
 
         private String GOOGLE_SEARCH_URL_PREFIX = "https://www.google.com/search?";
 
-        public String getGoogleSearchUrl() {
+        String getGoogleSearchUrl() {
             return GOOGLE_SEARCH_URL_PREFIX + "q=" + PLHD_QUERY + PLHD_RESULTS_NUM + PLHD_SITE;
         }
     }
