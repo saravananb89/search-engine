@@ -144,7 +144,7 @@ class WebSearch {
         return result;
     }
 
-    static org.slf4j.Logger getLogger() {
+    private static org.slf4j.Logger getLogger() {
         final Throwable t = new Throwable();
         t.fillInStackTrace();
         return LoggerFactory.getLogger(t.getStackTrace()[1].getClassName());

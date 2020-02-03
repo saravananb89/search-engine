@@ -11,7 +11,7 @@ public class WebSearchTest {
 
     @Test
     public void test_PrintTop5UsedJSLibs() {
-        List<String> topJSLibs = printTopJSLibraries(buildSearchQuery("java tutorials", 10));
+        List<String> topJSLibs = printTopJSLibraries(buildSearchQuery("java tutorials", 5));
         assertEquals(5, topJSLibs.size());
     }
 }

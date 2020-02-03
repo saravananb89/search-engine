@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94938be6-023b-447b-9d76-b2dcf5456347" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/search.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/search.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.saro.search.WebSearchTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.saro.search.WebSearchTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.saro.search.WebSearchTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.saro.search.WebSearchTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saro/search/SearchData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saro/search/SearchData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saro/search/WebSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saro/search/WebSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saro/search/WebSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saro/search/WebSearchTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,6 +208,14 @@
       <option name="presentableId" value="Default" />
       <updated>1578778155383</updated>
     </task>
+    <task id="LOCAL-00001">
+      <created>1580393501196</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580393501196</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,6 +230,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
